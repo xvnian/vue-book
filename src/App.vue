@@ -1,9 +1,9 @@
 <template>
   <div id="root">
   	<transition name="slide" enter-active-class="animated slideInRight fast" leave-active-class="animated slideOutLeft fast">
-  		<keep-alive>
+  		
 				<router-view></router-view>
-			</keep-alive>
+			
     </transition>
   </div>
 </template>
@@ -15,7 +15,6 @@ export default {
   name: 'app'
 }
 </script>
-
 <style>
 /*@import url(assets/all.css)*/
 /*transition*/

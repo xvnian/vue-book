@@ -41,10 +41,10 @@
                     <li @click="channel(371)" data-href="#page=channel&amp;id=371" data-title="免费"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p015iBxwdkmU/5wc5uzYhLZ7iVa.png">
                         <p class="top-home__des">免费</p>
                     </li>
-                    <li @click="channel(371)" data-href="#page=channel&amp;id=370" data-title="女生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01LWZmXGCpy/aSrSq6Llgt9PqE.png">
+                    <li @click="channel(370)" data-href="#page=channel&amp;id=370" data-title="女生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01LWZmXGCpy/aSrSq6Llgt9PqE.png">
                         <p class="top-home__des">女生</p>
                     </li>
-                    <li @click="channel(371)" data-href="#page=channel&amp;id=369" data-title="男生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01lq7mbkaEJ/OGlv1em8buXDgB.png">
+                    <li @click="channel(369)" data-href="#page=channel&amp;id=369" data-title="男生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01lq7mbkaEJ/OGlv1em8buXDgB.png">
                         <p class="top-home__des">男生</p>
                     </li>
                     <li @click="channel(371)" data-href="/hs/market/cate" data-title="分类"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01pz5NtyRI0/2ENONnvOg23NXM.png">
@@ -86,7 +86,7 @@
                                         <div class="book-h5" >
                                             <div class="book-h5__cover Lazy_loading Lazy_loaded"><img v-lazy="item.cover">
                                                 <div class="u-tagRT"></div>
-                                                <p class="book-h5__finish" v-if="item.finish">完结</p>
+                                                <p class="book-h5__finish" >{{item.finish?'完结':'连载'}}</p>
                                                 <div class="book-h5__order">1</div>
                                             </div>
                                             <div class="book-h5__info">
@@ -300,206 +300,6 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <ul class="list-h5">
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=316206&amp;source=2" da="index.3.b.5*2_316206" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="316206" id="Tag__25"><img alt="嚣张老公很爱我">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">嚣张老公很爱我</p>
-                                        <p class="book-h5__author"><span class="author">菜鸟也求凰</span></p>
-                                        <p class="book-h5__summary">“掉下个老公砸死我吧！”语毕，一个大帅哥倒在了她的面前！救人一命胜造七级浮屠，她好心送他去医院，还赠</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">总裁</div>
-                                            <div class="book-h5__tag">总裁世家</div>
-                                            <div class="book-h5__tag">175万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=18225&amp;source=2" da="index.3.b.6*2_18225" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="18225" id="Tag__26"><img alt="重生之嫡女不乖">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">重生之嫡女不乖</p>
-                                        <p class="book-h5__author"><span class="author">菡笑</span></p>
-                                        <p class="book-h5__summary">前世，直到她被毒死，才明白原来爱人的柔情、亲人的关怀，都是为了她不菲的财产和那不欲人知的秘密。重生四...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">重生之嫡女不乖</div>
-                                            <div class="book-h5__tag">穿越架空</div>
-                                            <div class="book-h5__tag">89万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=342931&amp;source=2" da="index.3.b.7*2_342931" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="342931" id="Tag__27"><img alt="蜜婚霸爱：傲娇男神深深宠">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">蜜婚霸爱：傲娇男神深深宠</p>
-                                        <p class="book-h5__author"><span class="author">蓝莓籽</span></p>
-                                        <p class="book-h5__summary">“不要……求求你出去。” 他嘴角微勾:“不是你夹着我不让我出去吗?” 谁能比她倒霉! ...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">现代言情</div>
-                                            <div class="book-h5__tag">116万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=322932&amp;source=2" da="index.3.b.8*2_322932" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="322932" id="Tag__28"><img alt="邪帝毒妃：神医大小姐">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">邪帝毒妃：神医大小姐</p>
-                                        <p class="book-h5__author"><span class="author">夜音如雪</span></p>
-                                        <p class="book-h5__summary">杀手之王一朝重生，医毒双绝，坐拥空间，附赠一只爱哭鬼。 百枚金币，买下一只病美男，却无端成了半壁江...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">玄幻言情</div>
-                                            <div class="book-h5__tag">206万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=316257&amp;source=2" da="index.3.b.9*2_316257" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="316257" id="Tag__29"><img alt="一胎双胞老婆太给力【完】">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">一胎双胞老婆太给力【完】</p>
-                                        <p class="book-h5__author"><span class="author">端木初初</span></p>
-                                        <p class="book-h5__summary">总裁大人的无限宠溺，将她推上浪尖！打压，栽赃，陷害，毒计一环接一环。小三小四轮番上阵，逼着身怀有孕的...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">宝宝</div>
-                                            <div class="book-h5__tag">总裁世家</div>
-                                            <div class="book-h5__tag">141万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="list-h5">
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=30890&amp;source=2" da="index.3.b.10*2_30890" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="30890" id="Tag__30"><img alt="醉红颜：朕的倾城鬼后">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">醉红颜：朕的倾城鬼后</p>
-                                        <p class="book-h5__author"><span class="author">映日</span></p>
-                                        <p class="book-h5__summary">曾经的她，倾国倾城，绝代芳华 曾经的她，温婉如莲，无欲无争 从不想独宠六宫，只求平安度日 所以，她掩...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">穿越奇情</div>
-                                            <div class="book-h5__tag">穿越架空</div>
-                                            <div class="book-h5__tag">121万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=30562&amp;source=2" da="index.3.b.11*2_30562" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="30562" id="Tag__31"><img alt="孽欢：冷情上神，请休妻！">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">孽欢：冷情上神，请休妻！</p>
-                                        <p class="book-h5__author"><span class="author">南觅</span></p>
-                                        <p class="book-h5__summary">前世： 他是她的师父，赐她生命，护她安稳，纵她欢乐。 她做他的弟子，当他是一生依赖，然而，她被打成重...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">穿越时空</div>
-                                            <div class="book-h5__tag">穿越架空</div>
-                                            <div class="book-h5__tag">124万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=317804&amp;source=2" da="index.3.b.12*2_317804" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="317804" id="Tag__32"><img alt="妖王鬼妃">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">妖王鬼妃</p>
-                                        <p class="book-h5__author"><span class="author">诺诺宝贝</span></p>
-                                        <p class="book-h5__summary">他是天生紫瞳权势熏天的妖王爷，她是异世来客其丑无比的鬼郡主，初见，她一刀劈开了他的自由之路，再见，她...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">妖王鬼妃</div>
-                                            <div class="book-h5__tag">穿越架空</div>
-                                            <div class="book-h5__tag">92万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=18262&amp;source=2" da="index.3.b.13*2_18262" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="18262" id="Tag__33"><img alt="司令夫人">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">司令夫人</p>
-                                        <p class="book-h5__author"><span class="author">肥妈向善</span></p>
-                                        <p class="book-h5__summary">她被爱人背叛，诬陷入狱，最终成功越狱，摘下丑陋的大眼镜，涅火重生。他是大名鼎鼎的海军司令，在军场、官...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">司令夫人</div>
-                                            <div class="book-h5__tag">现代言情</div>
-                                            <div class="book-h5__tag">106万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=322704&amp;source=2" da="index.3.b.14*2_322704" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="322704" id="Tag__34"><img alt="邪肆老公缠上门">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">邪肆老公缠上门</p>
-                                        <p class="book-h5__author"><span class="author">黑心苹果</span></p>
-                                        <p class="book-h5__summary">他是红三代中的太子，是黑白两道通杀的帝王，是女人恨不得贴上去死死扒住的金龟婿，可于她，他就是个想啃她...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">邪肆老公缠上门</div>
-                                            <div class="book-h5__tag">现代言情</div>
-                                            <div class="book-h5__tag">96万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="channel-h5__footer_next" id="Tag__35"><a class="btn-h5__next" href="javascript:" da="index.3.n.0" expose="">换一换</a><a class="btn-h5__more" data-href="#page=channel&amp;id=370" da="index.3.m.0" expose="">女生频道&gt;&gt;</a></div>
             </section>
@@ -522,208 +322,6 @@
                                         <p class="book-h5__summary">{{item.summary}}</p>
                                         <div class="book-h5__wrap">
                                             <div class="book-h5__tag" v-for="tag in item.tags">{{tag}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="list-h5">
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=284409&amp;source=2" da="index.4.b.5*2_284409" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="284409" id="Tag__42"><img alt="北宋小厨师">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">北宋小厨师</p>
-                                        <p class="book-h5__author"><span class="author">南希北庆</span></p>
-                                        <p class="book-h5__summary">身为一家超五星级酒店首席大厨的李奇，因为喝了点小酒，竟然奇迹般的穿越到了北宋末年。 来到这个无亲无故...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">爆笑</div>
-                                            <div class="book-h5__tag">历史传奇</div>
-                                            <div class="book-h5__tag">718万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=321944&amp;source=2" da="index.4.b.6*2_321944" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="321944" id="Tag__43"><img alt="通天武尊">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">通天武尊</p>
-                                        <p class="book-h5__author"><span class="author">夜云端</span></p>
-                                        <p class="book-h5__summary">一代至尊炼丹天才杨辰，因为不能修炼武道，遭到自己最亲近的女人背叛杀害，转世重生于一个被人欺凌的废材少...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">玄幻</div>
-                                            <div class="book-h5__tag">367万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=298942&amp;source=2" da="index.4.b.7*2_298942" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="298942" id="Tag__44"><img alt="特种兵王在都市">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">特种兵王在都市</p>
-                                        <p class="book-h5__author"><span class="author">李暮歌</span></p>
-                                        <p class="book-h5__summary">【巅峰聚焦——品牌佳作，强力推荐】兵王回归都市，却意外的和美女总裁结婚，既然老婆那么有钱，我就当个吃...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">都市情缘</div>
-                                            <div class="book-h5__tag">热血都市</div>
-                                            <div class="book-h5__tag">295万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=321798&amp;source=2" da="index.4.b.8*2_321798" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="321798" id="Tag__45"><img alt="龙皇武神">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">龙皇武神</p>
-                                        <p class="book-h5__author"><span class="author">步征</span></p>
-                                        <p class="book-h5__summary">凌云渡劫失败，降临地球末法时代，从都市中修真，一步步逆天崛起。 同修佛魔道！丹田蕴真龙！拥有太古龙...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">异术超能</div>
-                                            <div class="book-h5__tag">都市</div>
-                                            <div class="book-h5__tag">438万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=318578&amp;source=2" da="index.4.b.9*2_318578" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="318578" id="Tag__46"><img alt="重生娱乐圈：天后归来">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">重生娱乐圈：天后归来</p>
-                                        <p class="book-h5__author"><span class="author">夏婉瑛</span></p>
-                                        <p class="book-h5__summary">“BOSS，绫小姐在片场和人吵起来了！”“封杀对方。”“BOSS，绫小姐摔坏了您刚花两亿拍卖回来的古...</p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">现代言情</div>
-                                            <div class="book-h5__tag">296万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="list-h5">
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=318674&amp;source=2" da="index.4.b.10*2_318674" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="318674" id="Tag__47"><img alt="隐身侍卫">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">隐身侍卫</p>
-                                        <p class="book-h5__author"><span class="author">桃子卖没了</span></p>
-                                        <p class="book-h5__summary">无意间触电后的张易，发现自已竟然可以隐去身体，变成一个透明人，意外的惊喜让他开启了新的人生。 一个会...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">隐身</div>
-                                            <div class="book-h5__tag">都市</div>
-                                            <div class="book-h5__tag">467万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=318687&amp;source=2" da="index.4.b.11*2_318687" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="318687" id="Tag__48"><img alt="养个千年女鬼来防身">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">养个千年女鬼来防身</p>
-                                        <p class="book-h5__author"><span class="author">流云飘风</span></p>
-                                        <p class="book-h5__summary">我在超市当收银员，一个女顾客拿冥钞来买东西。 后来我才知道，女顾客不是来买东西，而是来买我的命。 一...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">灵异奇谈</div>
-                                            <div class="book-h5__tag">灵异</div>
-                                            <div class="book-h5__tag">210万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=319901&amp;source=2" da="index.4.b.12*2_319901" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="319901" id="Tag__49"><img alt="超品小农民">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">超品小农民</p>
-                                        <p class="book-h5__author"><span class="author">寞斜</span></p>
-                                        <p class="book-h5__summary">出了点小意外被开除的侦察兵王，无意间得到了残缺修真传承； 自己本来就是种种田，炼炼丹，追求追求什么...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">现代修真</div>
-                                            <div class="book-h5__tag">仙侠</div>
-                                            <div class="book-h5__tag">250万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=318787&amp;source=2" da="index.4.b.13*2_318787" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="318787" id="Tag__50"><img alt="绝美女神爱上我">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">连载</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">绝美女神爱上我</p>
-                                        <p class="book-h5__author"><span class="author">温酒煮浣熊</span></p>
-                                        <p class="book-h5__summary">长白山当了三年野人后，陆羽带着四份婚书下山。 四个风情各异的未婚妻，都是大美女，该娶哪一个？ 答...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">都市生活</div>
-                                            <div class="book-h5__tag">都市</div>
-                                            <div class="book-h5__tag">181万字</div>
-                                            <!--<p class="book-h5__latest">连载</p>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="book-h5" data-href="#page=book&amp;source_id=270797&amp;source=2" da="index.4.b.14*2_270797" expose="">
-                                    <div class="book-h5__cover Lazy_loading" data-id="270797" id="Tag__51"><img alt="武神空间">
-                                        <div class="u-tagRT"></div>
-                                        <p class="book-h5__finish">完结</p>
-                                    </div>
-                                    <div class="book-h5__info">
-                                        <p class="book-h5__title">武神空间</p>
-                                        <p class="book-h5__author"><span class="author">傅啸尘</span></p>
-                                        <p class="book-h5__summary">叶希文本只是地球上一个普通的大学生，却意外穿越到了一个名为真武界的世界！ 在这个世界中，强大的武者...
-                                        </p>
-                                        <div class="book-h5__wrap">
-                                            <div class="book-h5__tag">玄幻奇幻</div>
-                                            <div class="book-h5__tag">1168万字</div>
-                                            <!--<p class="book-h5__latest">完结</p>-->
                                         </div>
                                     </div>
                                 </div>
@@ -919,22 +517,29 @@ export default {
     	that.width = window.innerWidth;
     }
 
-    this.$http.jsonp(window.config.url + '/php/bookapi/index.php').then(response => {
-	    this.hotData = response.body.items[1].data.data;
-	    this.recommendSrcData = response.body.items[2].data.data;
-	    this.maleData = response.body.items[3].data.data;
-	    this.femaleData = response.body.items[4].data.data;
-	    this.freeData = response.body.items[5].data.data;
+    if(this.hotData.length === 0){
+      this.$http.jsonp(window.config.url + '/php/bookapi/index.php').then(response => {
+        this.hotData = response.body.items[1].data.data;
+        this.recommendSrcData = response.body.items[2].data.data;
+        this.maleData = response.body.items[3].data.data;
+        this.femaleData = response.body.items[4].data.data;
+        this.freeData = response.body.items[5].data.data;
 
-	  }, response => {
-	    console.log('index list error');
-	  });
+      }, response => {
+        console.log('index list error');
+      });
+    }
 
-    this.$http.jsonp(window.config.url + '/php/bookapi/bookrack.php').then(response => {
-      this.bookrackData = response.body.items;
-    }, response => {
-      console.log('bookrack list error');
-    });
+    
+
+    if(this.bookrackData.length === 0){
+      this.$http.jsonp(window.config.url + '/php/bookapi/bookrack.php').then(response => {
+        this.bookrackData = response.body.items;
+      }, response => {
+        console.log('bookrack list error');
+      });
+    }
+    
 
   }
 }
