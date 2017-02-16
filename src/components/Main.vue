@@ -762,202 +762,19 @@
         <div class="shelf-search"  @click="$router.push({ path: '/search' })">输入书名/作者/关键字</div>
     </div>
     <ul :class="[shelfList ? 'book-list' : 'book-list shelf-book book-table']">
-        <li id="Tag__62">
-            <div class="u-book" data-href="#page=reader&amp;id=294699" da="index.shelf.b.0*2_294699" expose="">
+        <li v-for="item in bookrackData" @click="book(item.fiction_id)">
+            <div class="u-book" >
                 <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="294699" id="Tag__63"><img alt="鬼吹灯II" src="http://cover.read.duokan.com/mfsv2/download/s010/p01e4UXqfYOI/CmsdGERS3faA0A.jpg!s">
+                    <div class="book-cover" ><img :alt="item.title" v-lazy="item.cover">
                         <div class="u-tagRT"></div>
                     </div>
                 </a>
                 <div class="info">
-                    <h3 class="title single-line">鬼吹灯II</h3>
-                    <p class="author single-line"><span class="author">本物天下霸唱</span></p>
-                    <p class="extra single-line">已读: 第一章 赶冬荒（上）</p>
+                    <h3 class="title single-line">{{item.title}}</h3>
+                    <p class="author single-line"><span class="author">{{item.authors}}</span></p>
+                    <!-- <p class="extra single-line">已读: 第一章 赶冬荒（上）</p> -->
                     <div class="wrap">
-                        <p class="extra single-line">最新: 第七十章 起源(全文完)</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__64">
-            <div class="u-book" data-href="#page=reader&amp;id=270754" da="index.shelf.b.1*2_270754" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="270754" id="Tag__65"><img alt="异能狂徒在校园" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p014X4p3eENJ/WoTZLC7ddAbXqi.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">异能狂徒在校园</h3>
-                    <p class="author single-line"><span class="author">三寸烟火</span></p>
-                    <p class="extra single-line">已读: 第二章 俏房东</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第两千一百五十五章 方之一姓</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__66">
-            <div class="u-book" data-href="#page=reader&amp;id=323725" da="index.shelf.b.2*2_323725" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="323725" id="Tag__67"><img alt="老九门" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01TQfpyV6px/06EirDzmjj8zuK.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">老九门</h3>
-                    <p class="author single-line"><span class="author">南派三叔</span></p>
-                    <p class="extra single-line">已读: 引子</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第三十一章 惨胜</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__68">
-            <div class="u-book" data-href="#page=reader&amp;id=307667" da="index.shelf.b.3*2_307667" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="307667" id="Tag__69"><img alt="神赌狂后" src="http://cover.read.duokan.com/mfsv2/download/s010/p0145bxkZG4g/ymu38GsRjCIyP7.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">神赌狂后</h3>
-                    <p class="author single-line"><span class="author">仙魅</span></p>
-                    <p class="extra single-line">已读: 报仇之始</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 病名为爱情</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__70">
-            <div class="u-book" data-href="#page=reader&amp;id=42318" da="index.shelf.b.4*2_42318" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="42318" id="Tag__71"><img alt="绝命诱惑" src="http://cover.read.duokan.com/mfsv2/download/s010/p01glg5pchIi/JfGjhpqRREi1WE.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">绝命诱惑</h3>
-                    <p class="author single-line"><span class="author">心梦无痕</span></p>
-                    <p class="extra single-line">已读: 第一卷 一朵桃花千百缘 第一章 桃花</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第二百零七章 重回人间</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__72">
-            <div class="u-book" data-href="#page=reader&amp;id=348531" da="index.shelf.b.5*2_348531" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="348531" id="Tag__73"><img alt="误惹前夫：傲娇小妻欠调教" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01VX5SwrpLJ/GHzGMSBubJBTiB.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">误惹前夫：傲娇小妻欠调教</h3>
-                    <p class="author single-line"><span class="author">樱桃布红</span></p>
-                    <p class="extra single-line">已读: 第11章 这是惊喜</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第229章 （大结局） 来日方长</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__74">
-            <div class="u-book" data-href="#page=reader&amp;id=345679" da="index.shelf.b.6*2_345679" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="345679" id="Tag__75"><img alt="毒医世子妃" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01mgpZyXPMz/jQv7L4zA5rq7L9.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">毒医世子妃</h3>
-                    <p class="author single-line"><span class="author">兰陵王</span></p>
-                    <p class="extra single-line">已读: 第二章 霸道王爷</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第七百九十章 曲终人散</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__76">
-            <div class="u-book" data-href="#page=reader&amp;id=345696" da="index.shelf.b.7*2_345696" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="345696" id="Tag__77"><img alt="掌御万界" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01M6LhFADw8/9YbaGlHagbaKAu.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">掌御万界</h3>
-                    <p class="author single-line"><span class="author">纳兰康成</span></p>
-                    <p class="extra single-line">已读: 第九章——牛刀小试</p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第一六一四章——命运回归（大结局）</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__78">
-            <div class="u-book" data-href="#page=reader&amp;id=319207" da="index.shelf.b.8*2_319207" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="319207" id="Tag__79"><img alt="诛仙" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01YqmjmWxtq/Eis58fZCsBFvXY.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">诛仙</h3>
-                    <p class="author single-line"><span class="author">萧鼎</span></p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 新书《天影》</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__80">
-            <div class="u-book" data-href="#page=reader&amp;id=345702" da="index.shelf.b.9*2_345702" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="345702" id="Tag__81"><img alt="神级大老板" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01LBM6BY89i/Sd413PC8OXoYL0.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">神级大老板</h3>
-                    <p class="author single-line"><span class="author">嚣张农民</span></p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第1969章 执掌天地（大结局）</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__82">
-            <div class="u-book" data-href="#page=reader&amp;id=345683" da="index.shelf.b.10*2_345683" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="345683" id="Tag__83"><img alt="兼职少奶奶" src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p019mQ5X8pcI/nI09l0NvQ02uNN.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">兼职少奶奶</h3>
-                    <p class="author single-line"><span class="author">纳兰湘湘</span></p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 【1091】汐汐大婚，嫦娥奔月</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li id="Tag__84">
-            <div class="u-book" data-href="#page=reader&amp;id=41421" da="index.shelf.b.11*2_41421" expose="">
-                <a>
-                    <div class="book-cover Lazy_loading Lazy_loaded" data-id="41421" id="Tag__85"><img alt="修真之覆宇翻云" src="http://cover.read.duokan.com/mfsv2/download/s010/p01r5DIeZY6f/M4OLEZsws34Irz.jpg!s">
-                        <div class="u-tagRT"></div>
-                    </div>
-                </a>
-                <div class="info">
-                    <h3 class="title single-line">修真之覆宇翻云</h3>
-                    <p class="author single-line"><span class="author">飞舞激扬</span></p>
-                    <div class="wrap">
-                        <p class="extra single-line">最新: 第一千七百六十八章 人算不如天算！</p>
+                        <p class="extra single-line">最新: {{item.latest}}</p>
                     </div>
                 </div>
             </div>
@@ -985,6 +802,7 @@ export default {
     	freeData : [],
     	maleData : [],
     	femaleData : [],
+      bookrackData : [],
       tabIndex : 0,
     	shelfList : true,
     	width :0,
@@ -1111,6 +929,13 @@ export default {
 	  }, response => {
 	    console.log('index list error');
 	  });
+
+    this.$http.jsonp(window.config.url + '/php/bookapi/bookrack.php').then(response => {
+      this.bookrackData = response.body.items;
+    }, response => {
+      console.log('bookrack list error');
+    });
+
   }
 }
 </script>
