@@ -142,7 +142,7 @@ export default {
           c_id: this.$route.params.chapter_id
         }
       };
-      this.$http.jsonp('http://chenxizihui.gotoip2.com/php/bookapi/link.php', option).then(response => {
+      this.$http.jsonp(window.config.url + '/php/bookapi/link.php', option).then(response => {
         var ret = JSON.parse(Base64.decode(response.body));
         this.title = ret.t;
         this.content = ret.p;
@@ -159,7 +159,7 @@ export default {
         id: this.$route.params.id
       }
     };
-    this.$http.jsonp('http://chenxizihui.gotoip2.com/php/bookapi/detail.php', option).then(response => {
+    this.$http.jsonp(window.config.url + '/php/bookapi/detail.php', option).then(response => {
       // var ret = JSON.parse(Base64.decode(response.body));
       // this.title = ret.t;
       // this.content = ret.p;

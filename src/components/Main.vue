@@ -1101,7 +1101,7 @@ export default {
     	that.width = window.innerWidth;
     }
 
-    this.$http.jsonp('http://chenxizihui.gotoip2.com/php/bookapi/index.php').then(response => {
+    this.$http.jsonp(window.config.url + '/php/bookapi/index.php').then(response => {
 	    this.hotData = response.body.items[1].data.data;
 	    this.recommendSrcData = response.body.items[2].data.data;
 	    this.maleData = response.body.items[3].data.data;

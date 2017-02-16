@@ -71,7 +71,7 @@ export default {
   			var option = {
   					params:{s:encodeURI(this.keyword)}
   			};
-  			this.$http.jsonp('http://chenxizihui.gotoip2.com/php/bookapi/search.php', option).then(response => {
+  			this.$http.jsonp(window.config.url + '/php/bookapi/search.php', option).then(response => {
 			    this.searchData = response.body.items;
 			    if(this.searchData.length == 0){
             this.empty = true

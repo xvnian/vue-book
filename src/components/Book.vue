@@ -142,7 +142,7 @@ export default {
 					params:{id: this.$route.params.id}
 		};
     if(this.bookData.length == 0){
-      this.$http.jsonp('http://chenxizihui.gotoip2.com/php/bookapi/book.php', option).then(response => {
+      this.$http.jsonp(window.config.url + '/php/bookapi/book.php', option).then(response => {
         this.bookData = response.body.item;
         this.author_books = response.body.author_books;
         this.related = response.body.related;
