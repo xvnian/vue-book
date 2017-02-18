@@ -59,7 +59,7 @@
                     <h1>作者其它图书</h1></div>
                 <div class="cnt">
                     <ul class="book-table">
-                        <li v-for="item in author_books">
+                        <li v-for="item in author_books" @click="book(item.fiction_id)">
                             <div class="u-book -vertical" >
                                 <div class="book-cover "><img :alt="item.title" v-lazy="item.cover">
                                     <div class="u-tagRT"></div>
@@ -76,7 +76,7 @@
                     <h1>喜欢本书的人也喜欢</h1></div>
                 <div class="cnt">
                     <ul class="book-table">
-                       <li v-for="item in related">
+                       <li v-for="item in related" @click="book(item.fiction_id)">
                             <div class="u-book -vertical" >
                                 <div class="book-cover "><img :alt="item.title" v-lazy="item.cover">
                                     <div class="u-tagRT"></div>
@@ -131,26 +131,38 @@ export default {
   		return format
   	}
   },
+  watch: {
+    '$route' (to, from) {
+      this.render();
+    }
+  },
   methods: {
   	readBook(){
   		let params = { id: this.bookData.source_id ,chapter_id: 0}
   		this.$router.push({ name: 'Reader', params: params})
-  	}
+  	},
+    book(id){
+        this.$router.push({ name: 'Book', params: { id: id }})
+    },
+    render(){
+      var option = {
+            params:{id: this.$route.params.id}
+      };
+      
+        this.$http.jsonp(window.config.url + '/php/bookapi/book.php', option).then(response => {
+          this.bookData = response.body.item;
+          this.author_books = response.body.author_books;
+          this.related = response.body.related;
+
+          document.querySelector(".top__bd").scrollTop = 0;
+        }, response => {
+          console.log('search list error');
+        });
+       
+    }
   },
   created: function () {
-    var option = {
-					params:{id: this.$route.params.id}
-		};
-    if(this.bookData.length == 0){
-      this.$http.jsonp(window.config.url + '/php/bookapi/book.php', option).then(response => {
-        this.bookData = response.body.item;
-        this.author_books = response.body.author_books;
-        this.related = response.body.related;
-      }, response => {
-        console.log('search list error');
-      });
-    }
-		
+    this.render()		
   }  
 }
 </script>

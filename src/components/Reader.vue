@@ -94,7 +94,7 @@ export default {
   methods: {
     getCatalog(){
       let params = { id: this.$route.params.id ,chapter_id: parseInt(this.$route.params.chapter_id)};
-      this.$router.push({ name: 'Catalog', params: params});
+      this.$router.replace({ name: 'Catalog', params: params});
     },
     nextCharpter(){
       let params = { id: this.$route.params.id ,chapter_id: parseInt(this.$route.params.chapter_id)+1};

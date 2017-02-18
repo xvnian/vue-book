@@ -521,8 +521,8 @@ export default {
       this.$http.jsonp(window.config.url + '/php/bookapi/index.php').then(response => {
         this.hotData = response.body.items[1].data.data;
         this.recommendSrcData = response.body.items[2].data.data;
-        this.maleData = response.body.items[3].data.data;
-        this.femaleData = response.body.items[4].data.data;
+        this.maleData = response.body.items[4].data.data;
+        this.femaleData = response.body.items[3].data.data;
         this.freeData = response.body.items[5].data.data;
 
       }, response => {

@@ -10,8 +10,8 @@ import VueResource from 'vue-resource'
 import VueLazyload from 'vue-lazyload'
 
 window.config = {
-	url : "http://192.168.1.103/imooc" //本地调试地址
-	//url : "http://chenxizihui.gotoip2.com" //网上地址
+	//url : "http://192.168.1.103/imooc" //本地调试地址
+	url : "http://chenxizihui.gotoip2.com" //网上地址
 };
 
 Vue.use(VueResource)

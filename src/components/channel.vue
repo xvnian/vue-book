@@ -6,7 +6,7 @@
     </div>
     <div class="top__bd" v-if="!loading">
         <div class="new-page channel-page" id="Tag__1651">
-            <section class="channel-group main-card">
+            <section class="channel-group main-card" v-if="aData.length!=0">
                 <div class="channel-group__header">
                     <h2 class="channel-group__title channel-group__title_left">{{aInfo.ad_name}}</h2></div>
                 <ul class="book-table">
@@ -37,7 +37,7 @@
                         </div>
                     </li>
                 </ul>
-                <a class="channel-group__footer" data-href="#page=topic&amp;type=fiction&amp;id=11322">查看更多</a>
+                <a class="channel-group__footer" >查看更多</a>
             </section>
             <section class="channel-group main-card">
                 <div class="channel-group__header">
@@ -140,24 +140,48 @@ export default {
     };
    
     this.$http.jsonp(window.config.url + '/php/bookapi/channel.php', option).then(response => {
+    	if(this.$route.params.id == 371){
+    		var arrData = [
+	    		response.body.items[0],
+	    		response.body.items[1],
+	    		response.body.items[2],
+	    		response.body.items[3],
+	    		response.body.items[4]
+	    	];
+    	} else {
+    		var arrData = [
+	    		response.body.items[0],
+	    		response.body.items[0],
+	    		response.body.items[1],
+	    		response.body.items[2],
+	    		response.body.items[3]
+	    	];
+    	}
+    	
+
       this.ad_setting_name = response.body.ad_setting_name.substr(3);
-      this.aData = response.body.items[0].data.data;
-      this.bData = response.body.items[1].data.data;
-      this.cData = response.body.items[2].data.data;
-      this.dData = response.body.items[3].data.data;
-      this.eData = response.body.items[4].data.data;
 
-      this.aInfo.ad_name = response.body.items[0].ad_name;
-      this.bInfo.ad_name = response.body.items[1].ad_name;
-      this.cInfo.ad_name = response.body.items[2].ad_name;
-      this.dInfo.ad_name = response.body.items[3].ad_name;
-      this.eInfo.ad_name = response.body.items[4].ad_name;
+      this.aData = arrData[0].data.data;
+      this.bData = arrData[1].data.data;
+      this.cData = arrData[2].data.data;
+      this.dData = arrData[3].data.data;
+      this.eData = arrData[4].data.data;
 
-      this.aInfo.ad_copy = response.body.items[0].ad_copy;
-      this.bInfo.ad_copy = response.body.items[1].ad_copy;
-      this.cInfo.ad_copy = response.body.items[2].ad_copy;
-      this.dInfo.ad_copy = response.body.items[3].ad_copy;
-      this.eInfo.ad_copy = response.body.items[4].ad_copy;
+      this.aInfo.ad_name = arrData[0].ad_name;
+      this.bInfo.ad_name = arrData[1].ad_name;
+      this.cInfo.ad_name = arrData[2].ad_name;
+      this.dInfo.ad_name = arrData[3].ad_name;
+      this.eInfo.ad_name = arrData[4].ad_name;
+
+      this.aInfo.ad_copy = arrData[0].ad_copy;
+      this.bInfo.ad_copy = arrData[1].ad_copy;
+      this.cInfo.ad_copy = arrData[2].ad_copy;
+      this.dInfo.ad_copy = arrData[3].ad_copy;
+      this.eInfo.ad_copy = arrData[4].ad_copy;
+
+      if(this.$route.params.id != 371){
+      	 this.aData = [];
+      }
 
       this.loading = false;
     }, response => {
