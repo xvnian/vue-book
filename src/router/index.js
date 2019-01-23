@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-import Main from '@/pages/main/Main'
-import Book from '@/pages/book/Book'
-import Reader from '@/pages/reader/Reader'
-import Catalog from '@/pages/reader/Catalog'
+import Main from 'components/Main'
+import Book from 'components/Book'
+import Search from 'components/Search'
+import Reader from 'components/Reader'
+import Channel from 'components/Channel'
+import Free from 'components/Free'
+import Catalog from 'components/Catalog'
 
 Vue.use(Router)
 
@@ -12,27 +14,38 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/Main/0'
-    },
-    {
-      path: '/Main/:tab',
       name: 'Main',
       component: Main
     },
     {
-      path: '/Reader/:fiction_id/chapter_id/:chapter_id',
-      name: 'Reader',
-      component: Reader
+      path: '/Search',
+      name: 'Search',
+      component: Search
     },
-    {
-      path: '/Book/:fiction_id',
-      name: 'Book',
+    { 
+      path: '/Book/:id',
+      name: 'Book', 
       component: Book
     },
-    {
-      path: '/Catalog/:fiction_id/chapter_id/:chapter_id',
-      name: 'Catalog',
+    { 
+      path: '/reader/:id/chapter/:chapter_id',
+      name: 'Reader', 
+      component: Reader
+    },
+    { 
+      path: '/Channel/:id',
+      name: 'Channel', 
+      component: Channel
+    },
+    { 
+      path: '/Free/:id',
+      name: 'Free', 
+      component: Free
+    },
+    { 
+      path: '/Catalog/:id/chapter/:chapter_id',
+      name: 'Catalog', 
       component: Catalog
-    }
+    }        
   ]
 })
