@@ -12,11 +12,20 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 })
 
 module.exports = merge(baseWebpackConfig, {
+  mode: 'development',
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap })
   },
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
+  devServer: {
+    port: 8000,
+    host: '0.0.0.0',
+    overlay: {
+      errors: true,
+    },
+    hot: true
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env

@@ -1,14 +1,38 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-    "stage-2"
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "last 2 versions",
+            "not ie <= 8"
+          ]
+        }
+      }
+    ]
   ],
-  "plugins": ["transform-runtime"],
-  "comments": false,
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ],
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
-      "plugins": [ "istanbul" ]
+      "presets": [
+        "@babel/preset-env",
+        "@babel/stage-2"
+      ],
+      "plugins": [
+        "transform-vue-jsx",
+        "istanbul"
+      ]
     }
   }
 }
