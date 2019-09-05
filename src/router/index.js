@@ -5,6 +5,7 @@ import Book from 'components/Book'
 import Search from 'components/Search'
 import Reader from 'components/Reader'
 import Channel from 'components/Channel'
+import Free from 'components/Free'
 import Catalog from 'components/Catalog'
 
 Vue.use(Router)
@@ -17,12 +18,12 @@ export default new Router({
       component: Main
     },
     {
-      path: '/search',
+      path: '/Search',
       name: 'Search',
       component: Search
     },
     { 
-      path: '/book/:id',
+      path: '/Book/:id',
       name: 'Book', 
       component: Book
     },
@@ -32,12 +33,17 @@ export default new Router({
       component: Reader
     },
     { 
-      path: '/channel/:id',
+      path: '/Channel/:id',
       name: 'Channel', 
       component: Channel
     },
     { 
-      path: '/catalog/:id/chapter/:chapter_id',
+      path: '/Free/:id',
+      name: 'Free', 
+      component: Free
+    },
+    { 
+      path: '/Catalog/:id/chapter/:chapter_id',
       name: 'Catalog', 
       component: Catalog
     }        

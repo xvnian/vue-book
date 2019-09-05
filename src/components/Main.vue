@@ -17,6 +17,7 @@
 						  @touchstart="touchstart"
               @touchmove="touchmove"
               @touchend="touchend"
+              @touchcancel="touchend"
 						v-bind:style="{width: width*2+'px', transform: 'translate3d('+tranlateX+'px, 0px, 0px)' , transition:'transform '+0.2*!touchFlag+'s ease-out'}">
 						<div v-bind:style="{width: width+'px'}">
 							<div class="Pull">
@@ -61,7 +62,7 @@
                 <ul class="book-table">
                     <li v-for='item in hotData' @click="book(item.fiction_id)">
                         <div class="u-book -vertical" >
-                            <div class="book-cover Lazy_loading Lazy_loaded" ><img :alt="item.title" v-lazy="item.cover">
+                            <div class="book-cover Lazy_loading Lazy_loaded" ><img :alt="item.title" v-lazy="item.cover+'!s'">
                                 <div class="u-tagRT"></div>
                             </div>
                             <div class="info">
@@ -480,34 +481,38 @@ export default {
         this.switchTab(0)
       }*/
 
-  		if(endTime - this.startTime > 300){
-				if(startTranlateX == 0){
-	  			if(offsetX < 0 && offsetX <= -this.width/6){
-	  				this.tabIndex = 1
-	  			} else {
-	  				this.tabIndex = 0
-	  			}
-	  		} else {
-					 if(offsetX >= this.width/6){
-					 	this.tabIndex = 0
-					 } else {
-					 	this.tabIndex = 1
-					 }
-	  		}
-			} else {
-				if(offsetX >= 50){
-					this.tabIndex = 0
-				} else if(offsetX <= -50){
-					this.tabIndex = 1
-				}
+  // 		if(endTime - this.startTime > 300){
+		// 		if(startTranlateX == 0){
+	 //  			if(offsetX < 0 && offsetX <= -this.width/20){
+	 //  				this.tabIndex = 1
+	 //  			} else {
+	 //  				this.tabIndex = 0
+	 //  			}
+	 //  		} else {
+		// 			 if(offsetX >= this.width/15){
+		// 			 	this.tabIndex = 0
+		// 			 } else {
+		// 			 	this.tabIndex = 1
+		// 			 }
+	 //  		}
+		// } else {
+			if(offsetX >= 10){
+				this.tabIndex = 0
+			} else if(offsetX <= -10){
+				this.tabIndex = 1
 			}
+		// }
       this.switchTab() 
     },
     book(id){
         this.$router.push({ name: 'Book', params: { id: id }})
     },
     channel(id){
-        this.$router.push({ name: 'Channel', params: { id: id }})
+        if(id == 371){
+            this.$router.push({ name: 'Free', params: { id: id }})
+        } else {
+            this.$router.push({ name: 'Channel', params: { id: id }})
+        }
     }
   },
   created: function () {
