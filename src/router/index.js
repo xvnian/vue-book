@@ -7,6 +7,7 @@ import Reader from 'components/Reader'
 import Channel from 'components/Channel'
 import Free from 'components/Free'
 import Catalog from 'components/Catalog'
+import Hello from 'components/Hello'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: Main
+    },
+    {
+      path: '/Hello',
+      name: 'Hello',
+      component: Hello
     },
     {
       path: '/Search',

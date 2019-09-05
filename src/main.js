@@ -46,7 +46,7 @@ router.beforeEach((to, from, next) => {
       if(window.weight[to.name] < window.weight[from.name]){
         window.isBack = true
       }
-    }
+    } 
     // if(window.previousHash[0] === ('#' + to.path)){
     //   window.isBack = true
     // }
@@ -68,7 +68,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach(route => {
   // console.log(location.hash);
-
+  
   // console.log(window.flag++)
 
 })
