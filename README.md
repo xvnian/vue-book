@@ -1,9 +1,9 @@
-# vue-book
+# vue-book1
 
 > A Vue.js project
 
 ## 演示地址
-[http://chenxizihui.gotoip2.com/vue-book/index.html](http://chenxizihui.gotoip2.com/vue-book/index.html)
+[http://www.xvnian.com/vue-book/index.html](http://chenxizihui.gotoip2.com/vue-book/index.html)
 
 ## Build Setup
 
